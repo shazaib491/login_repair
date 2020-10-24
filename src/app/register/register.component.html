@@ -1,0 +1,50 @@
+<div class="container  d-flex justify-content-center" [style.height]="'600px'">
+	<form [formGroup]="form" (ngSubmit)="sendData()" class="p-5 shadow border col-md-6 m-auto" >
+		<div class="form-group  m-auto">
+			<label>Username</label>
+			<input type="text" formControlName="u_name" name="" class="form-control" placeholder="Enter USername">
+			<div *ngIf="u_name.invalid && (u_name.dirty || u_name.touched)"
+				class="text-danger">
+				<div *ngIf="u_name.errors.required">
+					u_name is required.
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group  m-auto">
+			<label>Email</label>
+			<input type="email" formControlName="email" name="" class="form-control" placeholder="Enter Email" required>
+			<div *ngIf="email.invalid && (email.dirty || email.touched)"
+				class="text-danger">
+				<div *ngIf="email.errors.required">
+					email is required.
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group  m-auto">
+			<label>Password</label>
+			<input type="password" name="" formControlName="password" class="form-control" placeholder="*******">
+			<div *ngIf="password.invalid && (password.dirty || password.touched)"
+				class="text-danger">
+				<div *ngIf="password.errors.required">
+					password is required.
+				</div>
+			</div>
+		</div>
+		<div class="form-group  m-auto">
+			<label>Confirm-Password</label>
+			<input type="password" name="" formControlName="cpassword" class="form-control" placeholder="*******">
+			<div *ngIf="cpassword.invalid && (cpassword.dirty || cpassword.touched)"
+				class="text-danger">
+				<div *ngIf="cpassword.errors.required">
+					cpassword is required.
+				</div>
+			</div>
+
+		</div>
+		<div class="form-group mt-3">
+			<button type="submit" [disabled]="form.invalid" class="btn btn-primary btn-block" >Register</button>
+		</div>
+	</form>
+</div>

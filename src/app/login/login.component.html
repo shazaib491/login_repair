@@ -1,0 +1,27 @@
+<div class="container  d-flex justify-content-center" [style.height]="'600px'">
+	<form class="p-5 shadow border col-md-6 m-auto" [formGroup]="form" (ngSubmit)="login()" >
+		<div class="form-group  m-auto">
+			<label>Email</label>
+			<input type="email" name="email" formControlName="email" class="form-control" placeholder="Enter Email" required>
+			<div *ngIf="email.invalid && (email.dirty || email.touched)"
+				class="text-danger">
+				<div *ngIf="email.errors.required">
+					email is required.
+				</div>
+			</div>
+		</div>
+		<div class="form-group  m-auto">
+			<label>Password</label>
+			<input type="password" name="password" formControlName="password" class="form-control" placeholder="*******" required>
+			<div *ngIf="password.invalid && (password.dirty || password.touched)"
+				class="text-danger">
+				<div *ngIf="password.errors.required">
+					password is required.
+				</div>
+			</div>
+		</div>
+		<div class="form-group mt-3">
+			<button type="submit" class="btn btn-primary  btn-block" [disabled]="form.invalid"  >Login</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,10 @@
+.border{
+	border:1px solid black;
+}
+.box{
+	background-color: red;
+}
+.cricle{
+	border-radius: 50px;
+	border:1px solid pink;
+}
