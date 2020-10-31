@@ -23,8 +23,8 @@ form:FormGroup
   get password() { return this.form.get('password'); }
 
 login(){
-	console.log(this.form.value)
 	this.auth.login(this.form.value).subscribe((result)=>{
+		console.log(result)
 		if(result.success){
 			this.toastr.success('ThankYou!', result.success);
 			this.router.navigate(['/dashboard'])

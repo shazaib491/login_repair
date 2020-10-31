@@ -1,0 +1,59 @@
+  <!-- <input type="text" name="" (keypress)="setValue($event)" value="">
+
+  <br>
+
+  <p [style.fontSize.px]="i" [class]="color">{{store}}</p>
+  <button type="button" name="button" (click)="setFont('inc')" >+</button>
+
+  <button type="button" name="button"   (click)="setFont('dec')" >-</button>
+
+  <select class="" name="" (change)="setColor($event)">
+    <option value="text-primary border shadow">blue</option>
+    <option value="text-info border shadow">dark</option>
+    <option value="text-sucess border shadow">green</option>
+  </select> -->
+
+<!--
+ <section [class.hide]="isSubmitted">
+
+<form >
+  <input type="text" (keyup)="sendData($event)" name="name" [value]="record.name">
+  <input type="text" (keyup)="sendData($event)" name="stno" [value]="record.stno">
+  <input type="text" (keyup)="sendData($event)" name="company" [value]="record.company">
+  <input type="text" (keyup)="sendData($event)" name="salary" [value]="record.salary">
+  <button type="button" (click)="submit()" name="button">submit</button>
+</form>
+</section>
+<button type="button" class="btn btn-light border  mx-auto d-block" name="button" (click)="submitss()"><i style="font-size: 100px;" [class]="isDone?'fa fa-smile-o ':'fa fa-frown-o'" aria-hidden="true"></i></button>
+
+
+<section [class.hide]="!isSubmitted">
+  <p>{{record.name}}</p>
+  <p>{{record.stno}}</p>
+  <p>{{record.company}}</p>
+  <p>{{record.salary}}</p>
+</section>
+<div class="border" style="height:500px">
+  <h1>hello wolrd</h1>
+
+</div> -->
+
+
+<div [ngStyle]="mystyles">
+  hello wolrd
+</div>
+<input type="text" class="form-control" (keyup.enter)="setColor($event)" name="" value="">
+<!-- <button type="button" (click)="setColor()" name="button">click me</button> -->
+
+
+<!-- <div [ngClass]="myClass">
+hello jojo
+</div> -->
+
+<!-- <button type="button" (click)="setClass()" name="button">presss me</button> -->
+<button type="button" [ngClass]="myclass"  (click)="SetLike()" name="button">
+  <i [ngClass]="isChecked?'fa fa-thumbs-o-up':'fa fa-thumbs-o-down'" aria-hidden="true"></i>
+</button>
+
+<button type="button" class="btn btn-primary" (click)="setClss()" name="button"><i [ngClass]="myobj['fa fa-thumbs-o-up']?'fa fa-thumbs-o-up':'fa fa-thumbs-o-down'" aria-hidden="true"></i>
+</button>

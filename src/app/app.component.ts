@@ -15,14 +15,29 @@ export class AppComponent {
   color="red";
 
 flag=false;
-//event binding	
+//event binding
 nm:string="";
 upload(osaf){
 	console.log(osaf)
 	this.nm=osaf;
 }
 onpres(event:any){
-	
+
 }
 
+i = 20;
+sizer: any;
+setFont(font) {
+  if (font == 'inc') {
+    this.i++;
+  }
+  else {
+    this.i--;
+  }
+
+}
+bgColor:any;
+setBg(event){
+  this.bgColor=event.target.value;
+}
 }

@@ -1,0 +1,33 @@
+<div class="row" [class.hide]="ishidden">
+  <!-- false  sendData click  true -->
+  <div class="col-lg-6 col-md-6 col-sm-4 m-auto border shadow p-5">
+    <div class="form-group">
+      <label for="">Name</label>
+      <input type="text" name="name" (keyup)="setProperty($event)" placeholder="Enter Name" class="form-control" [value]="information?information.name:''">
+    </div>
+    <div class="form-group">
+      <label for="">Email</label>
+      <input type="text" name="email" class="form-control" (keyup)="setProperty($event)" placeholder="Enter Email" [value]="information?information.email:''">
+    </div>
+    <div class="form-group">
+      <label for="">Company _Name</label>
+      <input type="text" class="form-control" name="company" (keyup)="setProperty($event)" placeholder="Enter Company" [value]="information?information.company:''">
+    </div>
+    <div class="form-group">
+      <label for="">Salary</label>
+      <input type="text" name="salary" class="form-control" (keyup)="setProperty($event)" placeholder="Enter Salary" [value]="information?information.salary:''">
+    </div>
+    <button type="submit" class="btn btn-primary mx-auto d-block w-50" (click)="sendData()">Send</button>
+  </div>
+</div>
+
+<div class="col-md-6" [class.hide]="!ishidden">
+  <!-- not false  -->
+  <!-- class jab chelgi jub uski value true ho jaegi -->
+  <!-- interpolation -->
+  <p> {{information.name}} </p>
+  <p> {{information.email}}</p>
+  <p> {{information.company}}</p>
+  <p> {{information.salary}}</p>
+  <button type="button" (click)="AddData()" class="btn btn-primary">Add Data</button>
+</div>

@@ -13,6 +13,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { OsafComponent } from './osaf/osaf.component';
+import { EditersComponent } from './editers/editers.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ToastrModule } from 'ngx-toastr';
     DashboardComponent,
     LoginComponent,
     RegisterComponent,
+    OsafComponent,
+    EditersComponent,
 
   ],
   imports: [
