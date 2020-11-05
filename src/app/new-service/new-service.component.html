@@ -1,0 +1,12 @@
+<table class="table">
+    <thead class="thead-dark ">
+      <tr class="text-center">
+        <th scope="col m-auto"><input type="checkbox" (change)="onToggle(item)" value=""></th>
+        <th scope="col" [ngClass]="setClass()" >{{item.title}}</th>
+        <th scope="col"><button (click)="onDelete(item)" ><i class="fa fa-times"></i></button></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>

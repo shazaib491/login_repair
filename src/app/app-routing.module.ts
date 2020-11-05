@@ -5,14 +5,18 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { OsafComponent } from './osaf/osaf.component';
 import { EditersComponent } from './editers/editers.component';
+import { NewServiceComponent } from './new-service/new-service.component';
+import { SetterComponent } from './setter/setter.component';
 
 
 const routes: Routes = [
-	{path:"",component:OsafComponent},
-	{path:"login",component:LoginComponent},
-	{path:"dashboard",component:DashboardComponent},
+	{path:"osaf",component:OsafComponent},
+	{path:"Login",component:LoginComponent},
+	{path:"",component:DashboardComponent},
 	{path:"register",component:RegisterComponent},
-	{path:"editors",component:EditersComponent}
+	{path:"editors",component:EditersComponent},
+	{path:"newservice",component:NewServiceComponent},
+	{path:"setter",component:SetterComponent}
 
 ];
 

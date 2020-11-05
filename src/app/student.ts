@@ -1,5 +1,5 @@
 export interface Student {
-  name:String;
-  class:number;
-  rollno:number;
+  id:number;
+  title:string;
+  completed:boolean
 }

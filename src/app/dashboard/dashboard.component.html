@@ -1,3 +1,16 @@
-<h1>
-	hello wolrd
-</h1>
+<div class="">
+	<div class="row">
+		<div class="col-md-6 m-auto border border-bottom-0 p-5 ">
+			<h1 class="text-center font-weight-bold  ">Todo List</h1>
+			<form class="mt-3" method="post" (ngSubmit)="submit()">
+				<div class="form-group">
+					<input type="text" class="form-control  m-auto border border-top-0 border-left-0 border-right-0 border-dark" [(ngModel)]="todo" name="todo" placeholder="Enter New Tasks ......" value="" required>
+					<button type="submit" class="btn btn-info col-md-6 offset-lg-3 rounded-0 mt-3" name="button">Submit</button>
+				</div>
+			</form>
+		</div>
+		<div class="w-100 mt-5">
+		</div>
+	</div>
+	<app-editers *ngFor="let item of result" [todos]="item" (DeleteTodos)="deleteTodo($event)"></app-editers>
+</div>

@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { OsafComponent } from './osaf/osaf.component';
 import { EditersComponent } from './editers/editers.component';
+import { NewServiceComponent } from './new-service/new-service.component';
+import { SetterComponent } from './setter/setter.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { EditersComponent } from './editers/editers.component';
     RegisterComponent,
     OsafComponent,
     EditersComponent,
+    NewServiceComponent,
+    SetterComponent,
 
   ],
   imports: [

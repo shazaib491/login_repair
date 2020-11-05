@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-6 m-auto">
     <!-- using ngForm with ngModel -->
+    <!-- one way binding -->
     <form class="" #itemForm="ngForm" (ngSubmit)="setData(itemForm.value)"  >
       <div class="form-group">
         <input type="text" ngModel name="name" value="">
